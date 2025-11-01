@@ -20,7 +20,7 @@ body {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid rgba(255,255,255,0.03);
 }
-.brand { color:var(--text); text-decoration:none; font-weight:600; }
+.navbutton { color:var(--text); text-decoration:none; font-weight:600; }
 
 .container { max-width: 880px; margin: 2.5rem auto; padding: 0 1.25rem; }
 main h1 { font-size: 2rem; margin:0 0 0.5rem 0; }
@@ -28,8 +28,7 @@ main p { color: var(--muted); }
 section { background: rgba(255,255,255,0.02); padding:1rem; border-radius:8px; margin-top:1rem; }
 .site-footer { text-align:center; padding:2rem 1rem; color:var(--muted); }
 
-/* GIF / image placeholder styles */
-.hero-gif {
+.gif {
   display: block;
   width: 100%;
   max-width: 760px;

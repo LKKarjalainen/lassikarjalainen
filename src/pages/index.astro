@@ -3,29 +3,32 @@ import Layout from '../components/Layout.astro'
 import { Image } from 'astro:assets';
 import KolmioUkko from "../assets/kolmio.gif";
 import VanaMehe from "../assets/Ykähuuttis.png";
+import Naamakuva from "../assets/Nettisivukuva.jpg";
 
 ---
 
-<Layout title="Home">
+<Layout title="Lassi Karjalainen">
   <main class="container">
+    <Image src={Naamakuva} alt="naamakuva" class="image" loading="eager" />
     <h1>Lassi Karjalainen</h1>
     <h3>Tieto- ja ohjelmistotekniikan kandidaatti, Teknologiajohtamisen DI-opiskelija</h3>
+    <h3>TiTOL PJ, Linkin Projektipäällikkö, Linkin oppositio, Professional käsienheiluttelija ja Poliukko</h3>
     <p>Sähköposti: lassikarjalainen0@gmail.com</p>
     <p>Telegram: @LKKarjalainen</p>
-    <p>Puh. nro: +358 40 3566526</p>
-    <p>Yleinen nick: LKKarjalainen</p>
+    <p>Yleinen nick paikoissa: LKKarjalainen</p>
 
     <h2>Kuka</h2>
-    <p>Olen 23-vuotias Teknologiajohtamisen DI-opiskelija Jyväskylä Yliopistossa. Sivuaineina opiskelen taloustiedettä ja yrittäjyyttä. Harrastuksia on monia, mutta näistä maininnanarvoisia on MTG, tietokonerauta, psykologiakirjallisuuden lukeminen ja pelien kevyt warettaminen.</p>
+    <p>Olen 23-vuotias Teknologiajohtamisen DI-opiskelija Jyväskylän Yliopistossa. Sivuaineina opiskelen taloustiedettä ja yrittäjyyttä. Harrastuksia on monia, mutta näistä maininnanarvoisia on MTG, tietokonerauta, psykologiakirjallisuuden lukeminen ja pelien kevyt warettaminen.</p>
     <p>Työkokemusta minulla on lähinnä testiautomaatiosta ja manuaalisesta testauksesta. Näiden lisäksi olen toiminut patentti asiantuntijana ja yrityskonsulttina. Opiskeluissa olen keskittynyt laskennalliseenohjelmointiin ja kauppatieteisiin</p>
 
     <h2>Mitä</h2>
-    <p>Satunnaisia projekteja: <a href="https://github.com/LKKarjalainen">Github</a></p>
+    <p>Satunnaisia projekteja: <a href="https://github.com/LKKarjalainen">GitHub</a></p>
     <p>Pöhinä: <a href="https://www.linkedin.com/in/lassikarjalainen/">LinkedIn</a></p>
     <p>Wiki: <a href="https://wiki.linkkijkl.fi/index.php/K%C3%A4ytt%C3%A4j%C3%A4:LKKarjalainen">LinkkiWiki</a></p>
 
-    <p>Ainejärjestöaktivii <a href="https://linkkijkl.fi/">Linkillä</a> ja <a href="https://titol.fi/">TiTOLissa</a>.</p>
+    <p>Ainejärjestöaktiivi <a href="https://linkkijkl.fi/">Linkillä</a> ja <a href="https://titol.fi/">TiTOLissa</a>.</p>
     <p>Osallistun Linkin, Ynnän ja Algon tapahtumiin jokseenkin aktiivisesti.</p>
+    <p>Tunnettu olio myös paikoissa, kuten Freetime, Teerenpeli ja Hacklab Jyväskylä.</p>
 
     <h2>Missä</h2>
     <p>Jyväskylä tai tuttavallisemmin Jykylä.</p>
@@ -36,18 +39,19 @@ import VanaMehe from "../assets/Ykähuuttis.png";
     <p>Aktiivitoiminta on mielenkiintoista ja työtehtävät vaihtelevia. On hauskaa :-)</p>
     <p>Satunnainen ohjelmointi tai ns tunkkaaminen on kivaa. Olisi kivempaa kyllä saada projekteja maaliinkin :(</p>
 
-    <h2>Kaikki kutsumanimet</h2>
-    <p>"LKKarjalainen"</p>
+    <h2>Kutsumanimet</h2>
+    <p>"Lassi"</p>
     <p>"Karjalainen"</p>
+    <p>"LKKarjalainen"</p>
     <p>"Lassukka"</p>
     <p>"Leijona Linkkari"</p>
     <p>"Mitä näitä nyt on"</p>
 
-    <h2>Meemuja</h2>
+    <h2 id="meemuja">Meemuja</h2>
     <p>Huuttis:</p>
-    <Image src={VanaMehe} alt="huutismint" class="vanamehe" loading="lazy" />
+    <Image src={VanaMehe} alt="huutismint" class="image" loading="lazy" />
     <p>Kolmio:</p>
-    <Image src={KolmioUkko} alt="kolmio" class="kolmio-gif" loading="lazy" />
+    <Image src={KolmioUkko} alt="kolmio" class="gif" loading="lazy" />
 
   </main>
 </Layout>
