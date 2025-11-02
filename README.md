@@ -1,7 +1,8 @@
-# lassikarjalainen — Astro starter
+# lassikarjalainen 
 Basic personal website.
 
-Quick start
+
+Quick start:
 
 1. Install dependencies:
 ```bash
@@ -20,5 +21,7 @@ npm run build
 
 TODO:
 Better visuals :))
+
 Move memes to a hidden site or remove them completely.
+
 More automatic deployment procedure
