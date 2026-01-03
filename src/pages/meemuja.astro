@@ -3,12 +3,15 @@ import Layout from '../components/Layout.astro'
 import { Image } from 'astro:assets';
 import KolmioUkko from "/public/images/kolmio.gif";
 import VanaMehe from "/public/images/Ykähuuttis.png";
-import Naamakuva from "/public/images/Nettisivukuva.jpg";
 
 ---
 
 <Layout title="Lassi Karjalainen">
   <main class="container">
+    <h2>Fun facts:</h2>
+    <p>Näiden sivujen tausta väri on gradientti Linkin sinisestä (#035CFF) Ynnän siniseen (#1d2951).</p>
+    <p>Sain tämän domainin ja hostauksen kokonaiseksi vuodeksi hintaan 1,49 €</p>
+
     <h2 id="meemuja">Meemuja</h2>
     <p>Huuttis:</p>
     <Image src={VanaMehe} alt="huutismint" class="image" loading="lazy" />

@@ -21,7 +21,4 @@ npm run build
 
 TODO:
 Better visuals :))
-
-Move memes to a hidden site or remove them completely.
-
 More automatic deployment procedure
