@@ -1,0 +1,19 @@
+---
+import Layout from '../components/Layout.astro'
+import { Image } from 'astro:assets';
+import KolmioUkko from "/public/images/kolmio.gif";
+import VanaMehe from "/public/images/Ykähuuttis.png";
+import Naamakuva from "/public/images/Nettisivukuva.jpg";
+
+---
+
+<Layout title="Lassi Karjalainen">
+  <main class="container">
+    <h2 id="meemuja">Meemuja</h2>
+    <p>Huuttis:</p>
+    <Image src={VanaMehe} alt="huutismint" class="image" loading="lazy" />
+    <p>Kolmio:</p>
+    <Image src={KolmioUkko} alt="kolmio" class="gif" loading="lazy" />
+
+  </main>
+</Layout>
