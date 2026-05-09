@@ -1,0 +1,893 @@
+---
+import Layout from '../components/Layout.astro'
+import { Image } from 'astro:assets';
+
+---
+
+<Layout title="Lassi Karjalainen - Professional CV">
+  <!-- JSON-LD Structured Data for AI/Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lassi Karjalainen",
+    "jobTitle": "Technology Management Student @ JYU",
+    "email": "lassikarjalainen0@gmail.com",
+    "telephone": "+358403566526",
+    "sameAs": [
+      "https://github.com/LKKarjalainen",
+      "https://linkedin.com/in/username",
+    ],
+    "knowsLanguage": ["Finnish", "English", "Swedish"],
+    "knowsAbout": ["JavaScript", "TypeScript", "React", "Astro", "Node.js", "Full-stack Development", "Web Development", "Software Architecture"],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "University of Jyväskylä"
+    }
+  }
+  </script>
+
+  <main class="cv-container">
+    <!-- Header with Visual Stats -->
+    <header class="cv-header">
+      <div class="header-content">
+        <div class="name-title">
+          <h1>Lassi Karjalainen</h1>
+          <p class="professional-title">Technology Management Student @ JYU</p>
+        </div>
+        <div class="contact-info">
+          <a href="mailto:lassikarjalainen0@gmail.com" class="contact-link">lassikarjalainen0@gmail.com</a>
+          <span class="separator">•</span>
+          <a href="tel:+358403566526" class="contact-link">+358 40 356 6526</a>
+          <span class="separator">•</span>
+          <span class="location">Jyväskylä, Finland</span>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/LKKarjalainen" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+          <a href="https://www.linkedin.com/in/lassikarjalainen/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        
+      </div>
+      
+      <!-- Visual Statistics -->
+      <div class="stats-showcase">
+        <div class="stat-card">
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">Years of Student Organization Experience</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Years of IT-hobby Experience</div>
+        </div>
+      </div>
+
+      
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="cv-section summary-section" aria-labelledby="summary-heading">
+      <div class="summary-card">
+        <h2 id="summary-heading" class="summary-heading">Professional Summary</h2>
+        <p class="summary-text">
+          Software engineer and QA specialist with diverse experience spanning software development, test automation, quality assurance and DevOps. Proficient in end-to-end software development lifecycle, from architecture and implementation to validation and deployment. Demonstrated expertise in building robust automation frameworks using Robot Framework and Python, combined with hands-on development using modern technologies. Served as subject matter expert and patent contributor on medical device software. Master's student in Technology Management with Data Science specialization, bringing strategic thinking to technical implementation. Passionate about delivering high-quality software through comprehensive testing practices and efficient automation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Competencies - Visually Prominent -->
+    <section class="cv-section competencies-section" aria-labelledby="competencies-heading">
+      <h2 id="competencies-heading">Core Competencies</h2>
+      <div class="competencies-grid">
+        <span class="competency-tag">Test Automation</span>
+        <span class="competency-tag">Python</span>
+        <span class="competency-tag">Software Validation</span>
+        <span class="competency-tag">Machine Learning</span>
+        <span class="competency-tag">Software Testing</span>
+        <span class="competency-tag">Linux Environments</span>
+        <span class="competency-tag">Git & Version Control</span>
+        <span class="competency-tag">Robot Framework</span>
+        <span class="competency-tag">Rust</span>
+        <span class="competency-tag">CI/CD</span>
+        <span class="competency-tag">APIs</span>
+        <span class="competency-tag">Database Design</span>
+        <span class="competency-tag">Agile/Scrum</span>
+        <span class="competency-tag">Code Review</span>
+      </div>
+    </section>
+
+    <!-- Work Experience - AI-Optimized Format -->
+    <section class="cv-section" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Work Experience</h2>
+      
+    <article class="cv-entry" itemscope itemtype="https://schema.org/EmployeeRole">
+        <div class="entry-header">
+          <div>
+            <h3 itemprop="jobTitle">Software Developer</h3>
+            <p class="company" itemprop="hiringOrganization">USA Medical Electronix • Remote, Freelance</p>
+          </div>
+          <span class="date"><time itemprop="startDate" datetime="2024-02">February 2024</time> – <time itemprop="endDate" datetime="2025-06">June 2025</time></span>
+        </div>
+        <ul class="achievements" itemprop="description">
+          <li><strong>Other:</strong> Worked as a subject matter expert on the patent for the device and software</li>
+          <li><strong>Development:</strong> Designed and developed the software for a medical device from start to finish</li>
+          <li><strong>Collaboration:</strong> Worked in an small team with another developer, a supervisor, a software architect and the company leadership, shipping frequently with a lean approach to project management</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry" itemscope itemtype="https://schema.org/EmployeeRole">
+        <div class="entry-header">
+          <div>
+            <h3 itemprop="jobTitle">Test Automation Trainee</h3>
+            <p class="company" itemprop="hiringOrganization">Airbus Defence and Space • Jyväskylä, Finland</p>
+          </div>
+          <span class="date"><time itemprop="startDate" datetime="2024-05">May 2024</time> – <time itemprop="endDate" datetime="2024-09">September 2024</time></span>
+        </div>
+        <ul class="achievements" itemprop="description">
+          <li><strong>Leadership:</strong> Guided and onboarded new trainees and refactored onboarding documentation for new employees and trainees</li>
+          <li><strong>Development:</strong> Expanded and improved existing web automation. Explored alternative technologies for a new automation target</li>
+          <li><strong>Collaboration:</strong> Worked in an Agile team with developers, a product owner, a software architect and scrum master, shipping 2-week sprints consistently</li>
+        </ul>
+      </article>
+
+      <article class="cv-entry" itemscope itemtype="https://schema.org/EmployeeRole">
+        <div class="entry-header">
+          <div>
+            <h3 itemprop="jobTitle">Software Test Trainee</h3>
+            <p class="company" itemprop="hiringOrganization">Airbus Defence and Space • Jyväskylä, Finland</p>
+          </div>
+          <span class="date"><time itemprop="startDate" datetime="2023-05">May 2023</time> – <time itemprop="endDate" datetime="2023-09">September 2023</time></span>
+        </div>
+        <ul class="achievements" itemprop="description">
+          <li><strong>Testing:</strong> Manually tested products both with a robust test set and through exploratory testing. Reported findings to development teams</li>
+          <li><strong>Development:</strong> Built a robust integration of concurrent web automation alongside an existing mobile automation framework</li>
+          <li><strong>Collaboration:</strong> Worked in an Agile team with developers, a product owner, a software architect and scrum master, shipping 2-week sprints consistently</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Education - Structured Format -->
+    <section class="cv-section" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      
+      <article class="cv-entry" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+        <div class="entry-header">
+          <div>
+            <h3 itemprop="name">Master's Degree Programme in Technology Management, Information Technology</h3>
+            <p class="company" itemprop="credentialCategory">University of Jyväskylä • Finland</p>
+          </div>
+          <span class="date"><time itemprop="startDate" datetime="2025">2025</time> – <time itemprop="endDate" datetime="2025">Present</time></span>
+        </div>
+        <p class="details" itemprop="description">Minor in Economics<br>
+        Specialization in Software Engineering <br>
+        Relevant coursework: Software Engineering, Data Science and Machine Learning, Mathematical-logical thinking, Anticipation of Technological Development, Productization and Commercialization of Software, Innovation Management, Technology Entrepreneurship</p>
+      </article>
+
+      <article class="cv-entry" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+        <div class="entry-header">
+          <div>
+            <h3 itemprop="name">Bachelor of Technology - BTech, Information and Software Technology</h3>
+            <p class="company" itemprop="credentialCategory">University of Jyväskylä • Finland</p>
+          </div>
+          <span class="date"><time itemprop="startDate" datetime="2021">2021</time> – <time itemprop="endDate" datetime="2025">2025</time></span>
+        </div>
+        <p class="details" itemprop="description">Minor in Business Studies <br>
+        Specialization in Data Science<br>
+        Relevant coursework: Software Engineering, Data Science and Machine Learning, Web Development, Database Systems, Software Architecture, Algorithm Design, Mathematical-logical thinking, Innovation Management</p>
+      </article>
+      
+    </section>
+
+    <!-- Technical Skills - Proficiency Levels -->
+    <section class="cv-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Test Automation & QA</h4>
+          <ul class="skill-list">
+            <li><strong>Expert:</strong> Python, Robot Framework, Test Automation, Web Automation</li>
+            <li><strong>Proficient:</strong> Manual Testing, Exploratory Testing, Mobile Automation, CI/CD Integration</li>
+            <li><strong>Familiar:</strong> Performance Testing, Test Data Management</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Programming Languages</h4>
+          <ul class="skill-list">
+            <li><strong>Proficient:</strong> Python, Rust</li>
+            <li><strong>Familiar:</strong> Java, SQL, Bash/Shell Scripting</li>
+            <li><strong>Learning:</strong> Machine Learning frameworks, Advanced algorithms</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Tools & Infrastructure</h4>
+          <ul class="skill-list">
+            <li><strong>Expert:</strong> Git, Linux Environments, VS Code</li>
+            <li><strong>Proficient:</strong> CI/CD Pipelines, Docker, Database Design, APIs</li>
+            <li><strong>Familiar:</strong> Cloud platforms, Container orchestration</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Professional Competencies</h4>
+          <ul class="skill-list">
+            <li>Agile/Scrum Methodologies</li>
+            <li>Technical Problem-Solving & Debugging</li>
+            <li>Team Leadership & Mentoring</li>
+            <li>Software Validation & Quality Assurance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="cv-section" aria-labelledby="languages-heading">
+      <h2 id="languages-heading">Languages</h2>
+      <div class="languages-grid">
+        <div class="language-item">
+          <strong>Finnish</strong> - Native Proficiency
+        </div>
+        <div class="language-item">
+          <strong>English</strong> - Full Professional Proficiency (C1)
+        </div>
+        <div class="language-item">
+          <strong>Swedish</strong> - Professional Working Proficiency (B1)
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Overview -->
+    <section class="cv-section" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Featured Projects</h2>
+      
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Iltasoitto application</h3>
+            <span class="project-link"><a href="https://github.com/LKKarjalainen/iltasoitto" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
+          </div>
+          <p class="project-description">
+            An application that plays the Jyväskylä Iltasoitto from your phone's speaker at 20:00.
+            Extremely WIP due to Android memory and battery management.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">Android</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Linkkibot TG-bot</h3>
+            <span class="project-link"><a href="https://github.com/Linkkijkl/linkkibot" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
+          </div>
+          <p class="project-description">
+            A telegram bot designed to automate event announcing and reminders. Made for Linkki Jyväskylä ry.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">APIs</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Misc. Small Projects</h3>
+            <span class="project-link"><a href="https://github.com/LKKarjalainen/Small_projects" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
+          </div>
+          <p class="project-description">
+            Miscellaneous smaller projects made mostly in a couple of hours per project.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Robot Framework</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Perl</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>This website</h3>
+            <span class="project-link"><a href="https://github.com/LKKarjalainen/lassikarjalainen" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
+          </div>
+          <p class="project-description">
+            The github repository housing this website project. You can find some easter eggs in the code :)
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Astro</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  .cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #333;
+    line-height: 1.65;
+  }
+
+  /* Header - Impressive First Impression */
+  .cv-header {
+    background: linear-gradient(125deg, #0066cc 0%, #0052a3 100%);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+  }
+
+  .header-content {
+    margin-bottom: 2rem;
+  }
+
+  .name-title h1 {
+    margin: 0 0 0.25rem 0;
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+  }
+
+  .professional-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    color: #e6f0ff;
+    font-weight: 500;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-link {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .contact-link:hover {
+    color: #e6f0ff;
+    text-decoration: underline;
+  }
+
+  .separator {
+    color: #b3d9ff;
+  }
+
+  .location {
+    color: #e6f0ff;
+  }
+
+  .contact-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .contact-links a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    text-decoration: none;
+  }
+
+  /* Stats Showcase - Immediate Impact */
+  .stats-showcase {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffeb3b;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: #e6f0ff;
+    font-weight: 500;
+  }
+
+  /* Competencies Section */
+  .competencies-section {
+    color: white;
+    margin-bottom: 2.5rem;
+  }
+
+  .competencies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.25rem 0 0 0;
+  }
+
+  .competency-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+    color: white;
+    padding: 0.65rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+    transition: all 0.2s;
+  }
+
+  .competency-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.3);
+  }
+
+  /* Sections */
+  .cv-section {
+    background: linear-gradient(125deg, #0066cc 0%, #0052a3 100%);
+    margin-bottom: 2.5rem;
+  }
+
+  .cv-section h2 {
+    font-size: 1.6rem;
+    margin: 0 0 1.5rem 0;
+    color: white;
+    border-bottom: 3px solid #1d2951;
+    padding-bottom: 0.75rem;
+    font-weight: 800;
+  }
+
+  /* Summary Section */
+  .summary-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .summary-section h2 {
+    color: black;
+  }
+
+  .summary-card {
+    background-color: #f8faff;
+    padding: 1.75rem;
+    border-radius: 8px;
+    border-left: 5px solid #1d2951;
+    transition: all 0.3s;
+  }
+
+  .summary-card:hover {
+    border-left-color: #ffeb3b;
+  }
+
+  .summary-text {
+    margin: 0;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Work Experience Cards */
+  .cv-entry {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid #1d2951;
+    margin-bottom: 1.75rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .cv-entry:hover {
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12);
+    border-left-color: #ffeb3b;
+  }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .cv-entry h3 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.2rem;
+    color: #0a0a0a;
+    font-weight: 700;
+  }
+
+  .date {
+    font-size: 0.9rem;
+    color: #666;
+    white-space: nowrap;
+    font-weight: 600;
+    background-color: #f0f4ff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+  }
+
+  .company {
+    margin: 0.3rem 0 1rem 0;
+    font-weight: 600;
+    color: #0066cc;
+    font-size: 0.95rem;
+  }
+
+  /* Achievements - Highlighted */
+  .achievements {
+    margin: 0;
+    padding-left: 1.75rem;
+    color: #555;
+    list-style-type: none;
+  }
+
+  .achievements li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+    padding-left: 0;
+    position: relative;
+  }
+
+  .achievements li::before {
+    content: "▸";
+    position: absolute;
+    left: -1.5rem;
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .achievements strong {
+    color: #0066cc;
+    font-weight: 700;
+  }
+
+  /* Skills Grid */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+  }
+
+  .skill-category {
+    background: linear-gradient(135deg, #f8faff 0%, #f0f4ff 100%);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #1d2951;
+    transition: all 0.3s;
+  }
+
+  .skill-category:hover {
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12);
+    transform: translateY(-2px);
+    border-left-color: #ffeb3b;
+  }
+
+  .skill-category h4 {
+    margin: 0 0 0.9rem 0;
+    color: #0a0a0a;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .skill-list {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  .skill-list li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+  }
+
+  /* Languages */
+  .languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .language-item {
+    padding: 1rem;
+    background-color: #f8faff;
+    border-radius: 6px;
+    border-left: 4px solid #1d2951;
+    color: #555;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+  }
+
+  .language-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 102, 204, 0.12);
+    transform: translateY(-2px);
+    border-left-color: #ffeb3b;
+  }
+
+  .language-item strong {
+    color: #0066cc;
+    font-weight: 700;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.75rem;
+    margin: 1.25rem 0 0 0;
+  }
+
+  .project-card {
+    background: white;
+    border: 2px solid #e0e8ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card:hover {
+    border-color: #1d2951;
+    box-shadow: 0 12px 28px rgba(0, 102, 204, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .project-card h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #0a0a0a;
+    font-weight: 700;
+  }
+
+  .project-link a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    background-color: #f0f4ff;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+
+  .project-link a:hover {
+    background-color: #0066cc;
+    color: white;
+  }
+
+  .project-description {
+    margin: 0.75rem 0 1rem 0;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: auto;
+  }
+
+  .tech-tag {
+    display: inline-block;
+    background-color: #f0f4ff;
+    color: #0052a3;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #d0e0ff;
+  }
+
+  /* Print Optimization */
+  @media print {
+    .cv-container {
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    .cv-header {
+      color: black;
+      background: white;
+      border: 2px solid #333;
+      box-shadow: none;
+    }
+
+    .cv-header h1 {
+      color: black;
+    }
+
+    .professional-title,
+    .contact-links a,
+    .contact-info a {
+      color: black;
+    }
+
+    .stats-showcase {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat-card {
+      background-color: transparent;
+      border: 1px solid #ccc;
+    }
+
+    .stat-number {
+      color: #333;
+    }
+
+    .stat-label {
+      color: #666;
+    }
+
+    .contact-links {
+      display: block;
+    }
+
+    .cv-entry {
+      page-break-inside: avoid;
+    }
+
+    .cv-section {
+      page-break-inside: avoid;
+    }
+
+    .competency-tag {
+      background: white;
+      color: #0066cc;
+      border: 1px solid #0066cc;
+      box-shadow: none;
+    }
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .cv-header {
+      padding: 2rem;
+    }
+
+    .name-title h1 {
+      font-size: 2.2rem;
+    }
+
+    .stats-showcase {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .stat-card {
+      padding: 1rem;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+
+    .entry-header {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .date {
+      align-self: flex-start;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cv-container {
+      padding: 1.5rem 1rem;
+    }
+
+    .cv-header {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .name-title h1 {
+      font-size: 1.75rem;
+    }
+
+    .professional-title {
+      font-size: 1.1rem;
+    }
+
+    .stats-showcase {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+
+    .contact-info {
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+    }
+
+    .contact-links {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .contact-links a {
+      text-align: center;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .competencies-grid {
+      gap: 0.6rem;
+    }
+
+    .competency-tag {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .project-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .project-link a {
+      align-self: flex-start;
+    }
+  }
+</style>
