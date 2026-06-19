@@ -12,14 +12,14 @@ const certifications = [
     title: "Project Management Fundamentals",
     issuer: "IMBSkills",
     year: "2026",
-    image: "images/certs/project-management-fundamentals.4.png",
+    image: "/images/certs/project-management-fundamentals.4.png",
     pdf: "/certs/ProjectManagementFundamentals_Badge20260618-32-op2vmv.pdf"
   },
   {
     title: "Digital Marketing Certified",
     issuer: "Hubspot Academy",
     year: "2026",
-    image: "images/certs/hubspotacademy.png",
+    image: "/images/certs/hubspotacademy.png",
     pdf: "/certs/digitalmarketing.png"
   },
 ]
@@ -259,7 +259,7 @@ const certifications = [
         {certifications.map((cert) => (
           <article class="project-card cert-card">
             <div class="cert-top">
-              {cert.image ? <img class="cert-image" src={cert.image} alt={`${cert.title} certificate`} /> : null}
+              {cert.image ? <img class="cert-image" src={cert.image} loading="lazy" alt={`${cert.title} certificate`} /> : null}
               {cert.pdf ? (
                 <span class="project-link"><a href={cert.pdf} target="_blank" rel="noopener noreferrer" download>Download</a></span>
               ) : null}
