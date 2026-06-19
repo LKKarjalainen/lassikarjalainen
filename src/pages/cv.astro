@@ -1,6 +1,28 @@
 ---
 import Layout from '../components/Layout.astro'
-import { Image } from 'astro:assets';
+const certifications = [
+  {
+    title: "Cloud Computing Fundamentals",
+    issuer: "IMBSkills",
+    year: "2026",
+    image: "/images/certs/cloud-computing-fundamentals.png",
+    pdf: "/certs/IBMDesign20260617-30-2j412g.pdf"
+  },
+  {
+    title: "Project Management Fundamentals",
+    issuer: "IMBSkills",
+    year: "2026",
+    image: "images/certs/project-management-fundamentals.4.png",
+    pdf: "/certs/ProjectManagementFundamentals_Badge20260618-32-op2vmv.pdf"
+  },
+  {
+    title: "Digital Marketing Certified",
+    issuer: "Hubspot Academy",
+    year: "2026",
+    image: "images/certs/hubspotacademy.png",
+    pdf: "/certs/digitalmarketing.png"
+  },
+]
 
 ---
 
@@ -158,6 +180,99 @@ import { Image } from 'astro:assets';
       </article>
     </section>
 
+    <!-- Education - Structured Format -->
+    <section class="cv-section" aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+      
+      <article class="cv-entry" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+        <div class="entry-header">
+          <div>
+            <h3 itemprop="name">Master's Degree Programme in Technology Management, Information Technology</h3>
+            <p class="company" itemprop="credentialCategory">University of Jyväskylä • Finland</p>
+          </div>
+          <span class="date"><time itemprop="startDate" datetime="2025">2025</time> – <time itemprop="endDate" datetime="2025">Present</time></span>
+        </div>
+        <p class="details" itemprop="description">Minor in Economics<br>
+        Specialization in Software Engineering <br>
+        Relevant coursework: Software Engineering, Data Science and Machine Learning, Mathematical-logical thinking, Anticipation of Technological Development, Productization and Commercialization of Software, Innovation Management, Technology Entrepreneurship</p>
+      </article>
+
+      <article class="cv-entry" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
+        <div class="entry-header">
+          <div>
+            <h3 itemprop="name">Bachelor of Technology - BTech, Information and Software Technology</h3>
+            <p class="company" itemprop="credentialCategory">University of Jyväskylä • Finland</p>
+          </div>
+          <span class="date"><time itemprop="startDate" datetime="2021">2021</time> – <time itemprop="endDate" datetime="2025">2025</time></span>
+        </div>
+        <p class="details" itemprop="description">Minor in Business Studies <br>
+        Specialization in Data Science<br>
+        Relevant coursework: Software Engineering, Data Science and Machine Learning, Web Development, Database Systems, Software Architecture, Algorithm Design, Mathematical-logical thinking, Innovation Management</p>
+      </article>
+      
+    </section>
+
+    <!-- Technical Skills - Proficiency Levels -->
+    <section class="cv-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Test Automation & QA</h4>
+          <ul class="skill-list">
+            <li><strong>Expert:</strong> Python, Robot Framework, Test Automation, Web Automation</li>
+            <li><strong>Proficient:</strong> Manual Testing, Exploratory Testing, Mobile Automation, CI/CD Integration</li>
+            <li><strong>Familiar:</strong> Performance Testing, Test Data Management</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Programming Languages</h4>
+          <ul class="skill-list">
+            <li><strong>Proficient:</strong> Python, Rust</li>
+            <li><strong>Familiar:</strong> Java, SQL, Bash/Shell Scripting</li>
+            <li><strong>Learning:</strong> Machine Learning frameworks, Advanced algorithms</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Tools & Infrastructure</h4>
+          <ul class="skill-list">
+            <li><strong>Expert:</strong> Git, Linux Environments, VS Code</li>
+            <li><strong>Proficient:</strong> CI/CD Pipelines, Docker, Database Design, APIs</li>
+            <li><strong>Familiar:</strong> Cloud platforms, Container orchestration</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Professional Competencies</h4>
+          <ul class="skill-list">
+            <li>Agile/Scrum Methodologies</li>
+            <li>Technical Problem-Solving & Debugging</li>
+            <li>Team Leadership & Mentoring</li>
+            <li>Software Validation & Quality Assurance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="cv-section" aria-labelledby="certifications-heading">
+      <h2 id="certifications-heading">Certifications</h2>
+      <div class="certifications-grid">
+        {certifications.map((cert) => (
+          <article class="project-card cert-card">
+            <div class="cert-top">
+              {cert.image ? <img class="cert-image" src={cert.image} alt={`${cert.title} certificate`} /> : null}
+              {cert.pdf ? (
+                <span class="project-link"><a href={cert.pdf} target="_blank" rel="noopener noreferrer" download>Download</a></span>
+              ) : null}
+            </div>
+            <div class="cert-body">
+              <h3 class="cert-title">{cert.title}</h3>
+              <p class="project-description">{cert.issuer} • {cert.year}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
     <!-- Volunteering Experience - AI-Optimized Format -->
     <section class="cv-section" aria-labelledby="volunteering-heading">
       <h2 id="volunteering-heading">Volunteering</h2>
@@ -233,78 +348,6 @@ import { Image } from 'astro:assets';
       </article>
     </section>
 
-    <!-- Education - Structured Format -->
-    <section class="cv-section" aria-labelledby="education-heading">
-      <h2 id="education-heading">Education</h2>
-      
-      <article class="cv-entry" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-        <div class="entry-header">
-          <div>
-            <h3 itemprop="name">Master's Degree Programme in Technology Management, Information Technology</h3>
-            <p class="company" itemprop="credentialCategory">University of Jyväskylä • Finland</p>
-          </div>
-          <span class="date"><time itemprop="startDate" datetime="2025">2025</time> – <time itemprop="endDate" datetime="2025">Present</time></span>
-        </div>
-        <p class="details" itemprop="description">Minor in Economics<br>
-        Specialization in Software Engineering <br>
-        Relevant coursework: Software Engineering, Data Science and Machine Learning, Mathematical-logical thinking, Anticipation of Technological Development, Productization and Commercialization of Software, Innovation Management, Technology Entrepreneurship</p>
-      </article>
-
-      <article class="cv-entry" itemscope itemtype="https://schema.org/EducationalOccupationalCredential">
-        <div class="entry-header">
-          <div>
-            <h3 itemprop="name">Bachelor of Technology - BTech, Information and Software Technology</h3>
-            <p class="company" itemprop="credentialCategory">University of Jyväskylä • Finland</p>
-          </div>
-          <span class="date"><time itemprop="startDate" datetime="2021">2021</time> – <time itemprop="endDate" datetime="2025">2025</time></span>
-        </div>
-        <p class="details" itemprop="description">Minor in Business Studies <br>
-        Specialization in Data Science<br>
-        Relevant coursework: Software Engineering, Data Science and Machine Learning, Web Development, Database Systems, Software Architecture, Algorithm Design, Mathematical-logical thinking, Innovation Management</p>
-      </article>
-      
-    </section>
-
-    <!-- Technical Skills - Proficiency Levels -->
-    <section class="cv-section" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h4>Test Automation & QA</h4>
-          <ul class="skill-list">
-            <li><strong>Expert:</strong> Python, Robot Framework, Test Automation, Web Automation</li>
-            <li><strong>Proficient:</strong> Manual Testing, Exploratory Testing, Mobile Automation, CI/CD Integration</li>
-            <li><strong>Familiar:</strong> Performance Testing, Test Data Management</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h4>Programming Languages</h4>
-          <ul class="skill-list">
-            <li><strong>Proficient:</strong> Python, Rust</li>
-            <li><strong>Familiar:</strong> Java, SQL, Bash/Shell Scripting</li>
-            <li><strong>Learning:</strong> Machine Learning frameworks, Advanced algorithms</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h4>Tools & Infrastructure</h4>
-          <ul class="skill-list">
-            <li><strong>Expert:</strong> Git, Linux Environments, VS Code</li>
-            <li><strong>Proficient:</strong> CI/CD Pipelines, Docker, Database Design, APIs</li>
-            <li><strong>Familiar:</strong> Cloud platforms, Container orchestration</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h4>Professional Competencies</h4>
-          <ul class="skill-list">
-            <li>Agile/Scrum Methodologies</li>
-            <li>Technical Problem-Solving & Debugging</li>
-            <li>Team Leadership & Mentoring</li>
-            <li>Software Validation & Quality Assurance</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <!-- Languages -->
     <section class="cv-section" aria-labelledby="languages-heading">
       <h2 id="languages-heading">Languages</h2>
@@ -326,21 +369,7 @@ import { Image } from 'astro:assets';
       <h2 id="projects-heading">Featured Projects</h2>
       
       <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-header">
-            <h3>Iltasoitto application</h3>
-            <span class="project-link"><a href="https://github.com/LKKarjalainen/iltasoitto" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
-          </div>
-          <p class="project-description">
-            An application that plays the Jyväskylä Iltasoitto from your phone's speaker at 20:00.
-            Extremely WIP due to Android memory and battery management.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Kotlin</span>
-            <span class="tech-tag">Android</span>
-          </div>
-        </article>
-
+        
         <article class="project-card">
           <div class="project-header">
             <h3>Linkkibot TG-bot</h3>
@@ -354,22 +383,37 @@ import { Image } from 'astro:assets';
             <span class="tech-tag">APIs</span>
           </div>
         </article>
-
+        
         <article class="project-card">
           <div class="project-header">
             <h3>TiTOL-peli</h3>
             <span class="project-link"><a href="https://titolpeli.linkkijkl.fi" target="_blank" rel="noopener noreferrer">Try it out</a>
-            <a href="https://github.com/LKKarjalainen/TiTOLpeli" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
-          </div>
-          <p class="project-description">
-            A Godot based game made for TiTOL ry. The main idea is for teams to race against each other on a map and perform certain tasks as quickly as possible. Heavily inspired by Afrikan Tähti and Gimble.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">GDScript</span>
-            <span class="tech-tag">GDShader</span>
-            <span class="tech-tag">GitHub pipelines</span>
-          </div>
-        </article>
+              <a href="https://github.com/LKKarjalainen/TiTOLpeli" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
+            </div>
+            <p class="project-description">
+              A Godot based game made for TiTOL ry. The main idea is for teams to race against each other on a map and perform certain tasks as quickly as possible. Heavily inspired by Afrikan Tähti and Gimble.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">GDScript</span>
+              <span class="tech-tag">GDShader</span>
+              <span class="tech-tag">GitHub pipelines</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Iltasoitto application</h3>
+              <span class="project-link"><a href="https://github.com/LKKarjalainen/iltasoitto" target="_blank" rel="noopener noreferrer">View on GitHub</a></span>
+            </div>
+            <p class="project-description">
+              An application that plays the Jyväskylä Iltasoitto from your phone's speaker at 20:00.
+              Extremely WIP due to Android memory and battery management.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Kotlin</span>
+              <span class="tech-tag">Android</span>
+            </div>
+          </article>
 
         <article class="project-card">
           <div class="project-header">
@@ -846,7 +890,7 @@ import { Image } from 'astro:assets';
     margin: 0.75rem 0 1rem 0;
     color: #555;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.4;
     flex-grow: 1;
   }
 
@@ -854,19 +898,102 @@ import { Image } from 'astro:assets';
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
-    margin-top: auto;
+    margin-top: 1rem;
   }
 
   .tech-tag {
     display: inline-block;
     background-color: #f0f4ff;
-    color: #0052a3;
-    padding: 0.35rem 0.75rem;
+    color: #0066cc;
+    padding: 0.4rem 0.8rem;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 600;
-    border: 1px solid #d0e0ff;
+    border: 1px solid #dbeafe;
+    transition: all 0.2s;
   }
+
+  .tech-tag:hover {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0066cc;
+  }
+
+  /* Certifications */
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin: 1rem 0 0 0;
+  }
+
+  .cert-card {
+    background: white;
+    border: 2px solid #e0e8ff;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cert-card:hover {
+    border-color: #1d2951;
+    box-shadow: 0 12px 28px rgba(0, 102, 204, 0.15);
+    transform: translateY(-4px);
+  }
+
+  /* top row: small square image left, download button right */
+.cert-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /* small square image */
+.cert-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #dbeafe;
+    background: #f8fbff;
+    flex-shrink: 0;
+  }
+
+  /* title/issuer block under the top row */
+.cert-body {
+    margin-top: 0.75rem;
+  }
+
+.cert-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: #0a0a0a;
+  font-weight: 700;
+}
+
+.project-description {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+  /* responsive: single column and slightly smaller image */
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-image {
+    width: 56px;
+    height: 56px;
+  }
+}
 
   /* Print Optimization */
   @media print {
