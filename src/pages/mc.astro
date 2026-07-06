@@ -1,0 +1,27 @@
+---
+import Layout from '../components/Layout.astro'
+import { Image } from 'astro:assets';
+import GTNH from "/public/images/gtnh.png";
+
+---
+
+<Layout title="Lassi Karjalainen">
+  <main class="container">
+    <Image src={GTNH} alt="gtnh_logo" class="image" loading="eager" />
+    <h1>Minecraft serveri</h1>
+
+    <h2>Mitä</h2>
+    <p>Modpack: GregTech: New Horizons</p>
+    <p>Versio: 2.8.4</p>
+    
+    <h2>Miten</h2>
+    <p>Osoite: mc.lassikarjalainen.fi</p>
+    <p>Serverillä on whitelist, joten laita viestiä @LKKarjalainen telegramissa, että lisään nimen listaan.</p>
+    <p>Itse käytän Prism launcheria, koska se vaa toimii. Homma lienee toimii kaikilla launchereilla kuha pitää huolen, että on oikea packi versio.</p>
+
+    <h2>Miksi</h2>
+    <p>Masiinat go brr</p>
+    <p>Pränkit menee kovaa ku on modit auttamassa :DD</p>
+
+  </main>
+</Layout>
