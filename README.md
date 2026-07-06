@@ -19,6 +19,3 @@ npm run dev
 npm run build
 ```
 
-TODO:
-Better visuals :))
-More automatic deployment procedure
